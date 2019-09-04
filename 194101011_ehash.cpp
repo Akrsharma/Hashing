@@ -31,7 +31,7 @@ class Directory{
     void insertElement1(int,int);
     Directory(int globaldepth,int size){
         this->globaldepth = globaldepth;
-        int x = pow(globaldepth,2);
+        int x = pow(2,globaldepth);
         for(int i=0; i<x; i++){
             Bucket *newBucket = new Bucket(size,globaldepth);
             barr.push_back(newBucket);
@@ -223,7 +223,7 @@ int main(){
     cin>>option;
     cin>>globaldepth;
     cin>>size;
-    int changd = globaldepth,changeBuck = pow(globaldepth,2);
+    int changd = globaldepth,changeBuck = pow(2,globaldepth);
     Directory dt(globaldepth,size);
     cout<<dt.globaldepth<<" "<<dt.uniqueBucket.size()<<endl;
     while(cin>>choice){
